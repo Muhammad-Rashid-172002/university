@@ -199,62 +199,60 @@ class homescreen extends StatelessWidget {
                 color: Colors.green,
               ),
             ]),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(color: Colors.amber),
-                    child: Image(
-                      image: NetworkImage(
-                        'https://images.stockcake.com/public/3/1/0/3106290a-8202-4fbb-adad-1c616d5f59a5_large/fresh-vegetable-basket-stockcake.jpg',
-                      ),
-                      fit: BoxFit.cover,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Image(
+                    image: NetworkImage(
+                      'https://images.stockcake.com/public/3/1/0/3106290a-8202-4fbb-adad-1c616d5f59a5_large/fresh-vegetable-basket-stockcake.jpg',
                     ),
+                    fit: BoxFit.cover,
                   ),
-                  SizedBox(
-                    width: 10,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Image(
+                    image: NetworkImage(
+                        'https://static.vecteezy.com/system/resources/previews/033/117/879/non_2x/an-assortment-of-fruits-arranged-in-a-basket-on-a-soft-colored-backdrop-ai-generated-photo.jpg'),
+                    fit: BoxFit.cover,
                   ),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(color: Colors.amber),
-                    child: Image(
-                      image: NetworkImage(
-                          'https://static.vecteezy.com/system/resources/previews/033/117/879/non_2x/an-assortment-of-fruits-arranged-in-a-basket-on-a-soft-colored-backdrop-ai-generated-photo.jpg'),
-                      fit: BoxFit.cover,
-                    ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Image(
+                    image: NetworkImage(
+                        'https://as2.ftcdn.net/v2/jpg/06/28/34/57/1000_F_628345798_XrRzoeqTgvvxdemhRoZN3fiuu3q0f6BL.jpg'),
+                    fit: BoxFit.cover,
                   ),
-                  SizedBox(
-                    width: 10,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Image(
+                    image: NetworkImage(
+                        'https://www.indianhealthyrecipes.com/wp-content/uploads/2021/05/fruit-custard-recipe.jpg'),
+                    fit: BoxFit.cover,
                   ),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(color: Colors.amber),
-                    child: Image(
-                      image: NetworkImage(
-                          'https://as2.ftcdn.net/v2/jpg/06/28/34/57/1000_F_628345798_XrRzoeqTgvvxdemhRoZN3fiuu3q0f6BL.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(color: Colors.amber),
-                    child: Image(
-                      image: NetworkImage(
-                          'https://www.indianhealthyrecipes.com/wp-content/uploads/2021/05/fruit-custard-recipe.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
             Row(
               children: [
@@ -284,64 +282,71 @@ class homescreen extends StatelessWidget {
                 )
               ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    'Best Selling',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    width: 220,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Pro1()));
-                    },
-                    child: Icon(
-                      Icons.arrow_forward,
-                      color: Colors.green,
-                    ),
-                  )
-                ],
-              ),
+            SizedBox(
+              height: 20,
             ),
             Expanded(
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 40,
-                  ),
-                  Container(
-                    height: 130,
-                    width: 130,
-                    decoration: BoxDecoration(color: Colors.lightGreen),
-                    child: Image(
-                      image: NetworkImage(
-                          'https://thumbs.dreamstime.com/b/three-lemons-isolated-white-28990417.jpg'),
-                      fit: BoxFit.cover,
+                child: Column(
+              children: [
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 20,
                     ),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Container(
-                    height: 130,
-                    width: 130,
-                    decoration: BoxDecoration(color: Colors.lightGreen),
-                    child: Image(
-                      image: NetworkImage(
-                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkS7V8r_qmXYJFzHNFeKQKs5X2ugGHsl7d2w&s'),
-                      fit: BoxFit.cover,
+                    Text(
+                      'Best Selling',
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                  ),
-                ],
-              ),
-            )
+                    SizedBox(
+                      width: 220,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Pro1()));
+                      },
+                      child: Icon(
+                        Icons.arrow_forward,
+                        color: Colors.green,
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 40,
+                    ),
+                    Container(
+                      height: 130,
+                      width: 130,
+                      decoration: BoxDecoration(color: Colors.lightGreen),
+                      child: Image(
+                        image: NetworkImage(
+                            'https://thumbs.dreamstime.com/b/three-lemons-isolated-white-28990417.jpg'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Container(
+                      height: 130,
+                      width: 130,
+                      decoration: BoxDecoration(color: Colors.lightGreen),
+                      child: Image(
+                        image: NetworkImage(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkS7V8r_qmXYJFzHNFeKQKs5X2ugGHsl7d2w&s'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ))
           ],
         ));
   }

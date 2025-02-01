@@ -36,35 +36,40 @@ class _PepsiLogoState extends State<PepsiLogo> {
           SizedBox(
             height: 20,
           ),
-          Container(
-            height: 30,
-            width: 270,
-            child: TextField(
-              decoration: InputDecoration(
-                  filled: true,
-                  prefixIcon: Icon(Icons.search),
-                  hintText: 'Search',
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(),
-                      borderRadius: BorderRadius.circular(20))),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 30,
-            width: 270,
-            child: TextField(
-              decoration: InputDecoration(
-                  filled: true,
-                  prefixIcon: Icon(Icons.search),
-                  hintText: 'Search',
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(),
-                      borderRadius: BorderRadius.circular(20))),
-            ),
-          ),
+          Expanded(
+              child: Column(
+            children: [
+              Container(
+                height: 30,
+                width: 270,
+                child: TextField(
+                  decoration: InputDecoration(
+                      filled: true,
+                      prefixIcon: Icon(Icons.search),
+                      hintText: 'Search',
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(),
+                          borderRadius: BorderRadius.circular(20))),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 30,
+                width: 270,
+                child: TextField(
+                  decoration: InputDecoration(
+                      filled: true,
+                      prefixIcon: Icon(Icons.search),
+                      hintText: 'Search',
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(),
+                          borderRadius: BorderRadius.circular(20))),
+                ),
+              ),
+            ],
+          )),
           SizedBox(
             height: 90,
           ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/product/pro1.dart';
+import 'package:dotted_dashed_line/dotted_dashed_line.dart';
+import 'package:flutter_app/product/product2.dart';
 
 class Product1 extends StatefulWidget {
   const Product1({super.key});
@@ -52,16 +54,343 @@ class userscreen extends StatelessWidget {
 }
 
 class cartscreen extends StatelessWidget {
-  const cartscreen({
+  cartscreen({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 20,
-      width: 20,
-      color: Colors.amber,
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(top: 30, left: 10),
+          child: Row(
+            children: [
+              Icon(Icons.arrow_back_ios_new),
+              SizedBox(
+                width: 100,
+              ),
+              Text(
+                'My Cart',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              )
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 25),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 70,
+                  width: 343,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.green)),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Image.asset('assets/11.png'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15),
+                        child: Column(
+                          children: [
+                            Text(
+                              'Pineapple',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              'Tk 90',
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 132,
+                      ),
+                      Container(
+                        height: 30,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              height: 23,
+                              width: 23,
+                              color: Colors.green,
+                              child: Icon(
+                                Icons.add,
+                              ),
+                            ),
+                            Text('1 Pc'),
+                            Container(
+                              height: 23,
+                              width: 23,
+                              color: Colors.green,
+                              child: Icon(
+                                Icons.remove,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Container(
+                    height: 70,
+                    width: 343,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Colors.green)),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/13.png'),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15),
+                          child: Column(
+                            children: [
+                              Text(
+                                'Orange',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                'Tk 150',
+                                style: TextStyle(
+                                    color: Colors.green,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 105,
+                        ),
+                        Container(
+                          height: 30,
+                          width: 100,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Container(
+                                height: 23,
+                                width: 23,
+                                color: Colors.green,
+                                child: Icon(
+                                  Icons.add,
+                                ),
+                              ),
+                              Text('1 Pc'),
+                              Container(
+                                height: 23,
+                                width: 23,
+                                color: Colors.green,
+                                child: Icon(
+                                  Icons.remove,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 70,
+                  width: 343,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.green)),
+                  child: Row(
+                    children: [
+                      Image.asset('assets/12.png'),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15),
+                        child: Column(
+                          children: [
+                            Text(
+                              'Watermelon',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              'Tk 50',
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 86,
+                      ),
+                      Container(
+                        height: 30,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              height: 23,
+                              width: 23,
+                              color: Colors.green,
+                              child: Icon(
+                                Icons.add,
+                              ),
+                            ),
+                            Text('1 Pc'),
+                            Container(
+                              height: 23,
+                              width: 23,
+                              color: Colors.green,
+                              child: Icon(
+                                Icons.remove,
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 8, top: 30),
+          child: Row(
+            children: [
+              Text('Item Schedule'),
+              SizedBox(
+                width: 200,
+              ),
+              Text(
+                'Tk 510',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 8),
+          child: Row(
+            children: [
+              Text('Delivery Fee'),
+              SizedBox(
+                width: 213,
+              ),
+              Text(
+                'Tk 50',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Container(
+          height: 40,
+          width: 220,
+          decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 193, 244, 219),
+              borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.badge_outlined,
+                color: const Color.fromARGB(255, 14, 112, 18),
+              ),
+              SizedBox(
+                width: 4,
+              ),
+              Text(
+                'Apply Purchase Code',
+                style: TextStyle(color: const Color.fromARGB(255, 14, 112, 18)),
+              ),
+              Icon(
+                Icons.arrow_forward_ios,
+                color: const Color.fromARGB(255, 14, 112, 18),
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 40,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            DottedDashedLine(height: 3, width: 340, axis: Axis.horizontal)
+          ],
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              'Total Cost',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              width: 200,
+            ),
+            Text(
+              'Tk 560',
+              style:
+                  TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Container(
+          height: 40,
+          width: 250,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Colors.green),
+          child: Center(
+            child: Text(
+              'Processed to Checkedout',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        )
+      ],
     );
   }
 }
@@ -194,9 +523,15 @@ class homescreen extends StatelessWidget {
               SizedBox(
                 width: 230,
               ),
-              Icon(
-                Icons.arrow_forward,
-                color: Colors.green,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Product2()));
+                },
+                child: Icon(
+                  Icons.arrow_forward,
+                  color: Colors.green,
+                ),
               ),
             ]),
             Row(

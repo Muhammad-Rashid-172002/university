@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/product/pro1.dart';
 import 'package:dotted_dashed_line/dotted_dashed_line.dart';
-import 'package:flutter_app/product/product2.dart';
+import 'package:flutter_app/product2/product2.dart';
 
 class Product1 extends StatefulWidget {
   const Product1({super.key});
@@ -402,10 +402,325 @@ class favorityscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 20,
-      width: 20,
-      color: Colors.amber,
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(left: 10, top: 20),
+          child: Row(
+            children: [
+              Icon(Icons.arrow_back),
+              SizedBox(
+                width: 100,
+              ),
+              Text(
+                'Favoutite',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              height: 70,
+              width: 350,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.greenAccent)),
+              child: Row(
+                children: [
+                  Container(
+                      height: 70,
+                      width: 70,
+                      child: Image.asset('assets/13.png')),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Orenge',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text('1Ps')
+                    ],
+                  ),
+                  SizedBox(
+                    width: 160,
+                  ),
+                  Text(
+                    'Tk 230',
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.green,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              height: 70,
+              width: 350,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.greenAccent)),
+              child: Row(
+                children: [
+                  Container(
+                      height: 70,
+                      width: 70,
+                      child: Image.asset('assets/12.png')),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Watermelon',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text('1Ps')
+                    ],
+                  ),
+                  SizedBox(
+                    width: 130,
+                  ),
+                  Text(
+                    'Tk 120',
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.green,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              height: 70,
+              width: 350,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.greenAccent)),
+              child: Row(
+                children: [
+                  Container(
+                      height: 70,
+                      width: 70,
+                      child: Image.asset('assets/20.png')),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Kiwi',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text('1Ps')
+                    ],
+                  ),
+                  SizedBox(
+                    width: 181,
+                  ),
+                  Text(
+                    'Tk 399',
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.green,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              height: 70,
+              width: 350,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.greenAccent)),
+              child: Row(
+                children: [
+                  Container(
+                      height: 70,
+                      width: 70,
+                      child: Image.asset('assets/11.png')),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Pineapple',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text('1Ps')
+                    ],
+                  ),
+                  SizedBox(
+                    width: 143,
+                  ),
+                  Text(
+                    'Tk 400',
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.green,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              height: 70,
+              width: 350,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.greenAccent)),
+              child: Row(
+                children: [
+                  Container(
+                      height: 70,
+                      width: 70,
+                      child: Image.asset('assets/15.png')),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Mango',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text('1Ps')
+                    ],
+                  ),
+                  SizedBox(
+                    width: 160,
+                  ),
+                  Text(
+                    'Tk 399',
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.green,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              height: 70,
+              width: 350,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.greenAccent)),
+              child: Row(
+                children: [
+                  Container(
+                      height: 70,
+                      width: 70,
+                      child: Image.asset('assets/19.png')),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'black berry',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text('1Ps')
+                    ],
+                  ),
+                  SizedBox(
+                    width: 135,
+                  ),
+                  Text(
+                    'Tk 290',
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.green,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              height: 70,
+              width: 350,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.greenAccent)),
+              child: Row(
+                children: [
+                  Container(
+                      height: 70,
+                      width: 70,
+                      child: Image.asset('assets/21.png')),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Stabrey',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text('1Ps')
+                    ],
+                  ),
+                  SizedBox(
+                    width: 158,
+                  ),
+                  Text(
+                    'Tk 300',
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.green,
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 50,
+        ),
+        Container(
+          height: 40,
+          width: 270,
+          decoration: BoxDecoration(
+              color: Colors.green, borderRadius: BorderRadius.circular(50)),
+          child: Center(
+            child: Text(
+              'Add to Cart',
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

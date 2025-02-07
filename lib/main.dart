@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/onboardingScreen/homeScreen.dart';
-import 'package:flutter_app/onboardingScreen/loginScreen/done.dart';
 import 'package:flutter_app/onboardingScreen/loginScreen/login.dart';
 import 'package:flutter_app/onboardingScreen/loginScreen/login2.dart';
 import 'package:flutter_app/onboardingScreen/loginScreen/login3.dart';

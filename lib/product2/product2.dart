@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/product/pro1.dart';
 import 'package:flutter_app/product2/pr1.dart';
 import 'package:flutter_app/product2/pro10.dart';
 import 'package:flutter_app/product2/pro2.dart';
@@ -47,7 +46,11 @@ class _Product2State extends State<Product2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios_new_outlined),
+        leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(Icons.arrow_back)),
         title: Text('Fruits'),
       ),
       body: Column(

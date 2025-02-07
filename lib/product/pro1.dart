@@ -47,7 +47,11 @@ class _Pro1State extends State<Pro1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios_new_outlined),
+        leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(Icons.arrow_back)),
         title: Text('Vegetables'),
       ),
       body: Column(

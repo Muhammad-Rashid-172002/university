@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/onboardingScreen/loginScreen/login.dart';
+import 'package:flutter_app/product/catagories.dart';
 import 'package:flutter_app/product/pro1.dart';
 import 'package:dotted_dashed_line/dotted_dashed_line.dart';
 import 'package:flutter_app/product2/product2.dart';
@@ -47,8 +49,234 @@ class userscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [Icon(Icons.menu), Icon(Icons.forward)],
+    return Column(
+      children: [
+        Container(
+          decoration: BoxDecoration(color: Colors.green),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 35, left: 10),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 120,
+                    ),
+                    Text(
+                      'Profile',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.circular(100)),
+                  child: Image.asset(
+                    'assets/23.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Text(
+                'Muhammad Rashid',
+                style: TextStyle(color: Colors.white),
+              ),
+              Text(
+                'mrashid@gamil.com',
+                style: TextStyle(color: Colors.white),
+              ),
+              SizedBox(
+                height: 15,
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.person_2_outlined),
+              SizedBox(
+                width: 10,
+              ),
+              Text('My Profile'),
+              SizedBox(
+                width: 170,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.location_on_outlined),
+              SizedBox(
+                width: 10,
+              ),
+              Text('My Address'),
+              SizedBox(
+                width: 162,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.shopping_bag_outlined),
+              SizedBox(
+                width: 10,
+              ),
+              Text('My Order'),
+              SizedBox(
+                width: 180,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.payment_outlined),
+              SizedBox(
+                width: 10,
+              ),
+              Text('Payment'),
+              SizedBox(
+                width: 180,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.message_outlined),
+              SizedBox(
+                width: 10,
+              ),
+              Text('Message'),
+              SizedBox(
+                width: 177,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.settings_outlined),
+              SizedBox(
+                width: 10,
+              ),
+              Text('Setting'),
+              SizedBox(
+                width: 188,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(
+                Icons.logout_outlined,
+                color: Colors.green,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                },
+                child: Text(
+                  'Log Out',
+                  style: TextStyle(color: Colors.green),
+                ),
+              ),
+              SizedBox(
+                width: 185,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+      ],
     );
   }
 }
@@ -841,7 +1069,7 @@ class homescreen extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Product2()));
+                      MaterialPageRoute(builder: (context) => Catagories()));
                 },
                 child: Icon(
                   Icons.arrow_forward,
@@ -853,83 +1081,99 @@ class homescreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 60,
-                  width: 60,
-                  decoration: BoxDecoration(color: Colors.amber),
-                  child: Image(
-                    image: NetworkImage(
-                      'https://images.stockcake.com/public/3/1/0/3106290a-8202-4fbb-adad-1c616d5f59a5_large/fresh-vegetable-basket-stockcake.jpg',
-                    ),
-                    fit: BoxFit.cover,
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(color: Colors.white),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        child: Image(
+                          image: NetworkImage(
+                            'https://media.istockphoto.com/id/1127420706/photo/fresh-vegetables-in-basket-on-white-isolated-background-top-view.jpg?s=612x612&w=0&k=20&c=U-9e1GUykrLoDumkoXHbfUV-3cBss_9CTUdQy38CTgk=',
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Text(
+                        'Vegeta..',
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(
                   width: 10,
                 ),
                 Container(
-                  height: 60,
-                  width: 60,
-                  decoration: BoxDecoration(color: Colors.amber),
-                  child: Image(
-                    image: NetworkImage(
-                        'https://static.vecteezy.com/system/resources/previews/033/117/879/non_2x/an-assortment-of-fruits-arranged-in-a-basket-on-a-soft-colored-backdrop-ai-generated-photo.jpg'),
-                    fit: BoxFit.cover,
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(color: Colors.white),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        child: Image(
+                          image: NetworkImage(
+                              'https://i.pinimg.com/736x/2b/d9/f3/2bd9f3d20a6de968bff7d46c46f71e23.jpg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Text(
+                        'Fruites',
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(
                   width: 10,
                 ),
                 Container(
-                  height: 60,
-                  width: 60,
-                  decoration: BoxDecoration(color: Colors.amber),
-                  child: Image(
-                    image: NetworkImage(
-                        'https://as2.ftcdn.net/v2/jpg/06/28/34/57/1000_F_628345798_XrRzoeqTgvvxdemhRoZN3fiuu3q0f6BL.jpg'),
-                    fit: BoxFit.cover,
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(color: Colors.white),
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 50,
+                        height: 50,
+                        child: Image(
+                          image: NetworkImage(
+                              'https://media.istockphoto.com/id/1064355846/photo/whole-round-yellowtail-fish-or-hamachi-fish-in-the-basket-on-white-background.jpg?s=612x612&w=0&k=20&c=sK9GIpPqsZQG83zvlNfbYtEElq3cY-uBAadtdh5GccE='),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Text(
+                        'Fishes',
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(
                   width: 10,
                 ),
                 Container(
-                  height: 60,
-                  width: 60,
-                  decoration: BoxDecoration(color: Colors.amber),
-                  child: Image(
-                    image: NetworkImage(
-                        'https://www.indianhealthyrecipes.com/wp-content/uploads/2021/05/fruit-custard-recipe.jpg'),
-                    fit: BoxFit.cover,
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(color: Colors.white),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        child: Image(
+                          image: NetworkImage(
+                              'https://img.pikbest.com/png-images/20240630/wicker-basket-filled-with-raw-meat-and-vegetables_10644644.png!w700wp'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Text(
+                        'Meat',
+                      )
+                    ],
                   ),
                 ),
-              ],
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 35,
-                ),
-                Text(
-                  'Vegetables',
-                ),
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  'Fruites',
-                ),
-                SizedBox(
-                  width: 25,
-                ),
-                Text(
-                  'Fishes',
-                ),
-                SizedBox(
-                  width: 25,
-                ),
-                Text(
-                  'Casted',
-                )
               ],
             ),
             SizedBox(
@@ -944,21 +1188,15 @@ class homescreen extends StatelessWidget {
                       width: 20,
                     ),
                     Text(
-                      'Best Selling',
+                      'Over Products',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
-                      width: 220,
+                      width: 216,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Pro1()));
-                      },
-                      child: Icon(
-                        Icons.arrow_forward,
-                        color: Colors.green,
-                      ),
+                    Icon(
+                      Icons.arrow_forward,
+                      color: Colors.green,
                     )
                   ],
                 ),
@@ -970,27 +1208,41 @@ class homescreen extends StatelessWidget {
                     SizedBox(
                       width: 40,
                     ),
-                    Container(
-                      height: 130,
-                      width: 130,
-                      decoration: BoxDecoration(color: Colors.lightGreen),
-                      child: Image(
-                        image: NetworkImage(
-                            'https://thumbs.dreamstime.com/b/three-lemons-isolated-white-28990417.jpg'),
-                        fit: BoxFit.cover,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Pro1()));
+                      },
+                      child: Container(
+                        height: 130,
+                        width: 130,
+                        decoration: BoxDecoration(color: Colors.lightGreen),
+                        child: Image(
+                          image: NetworkImage(
+                              'https://media.istockphoto.com/id/1127420706/photo/fresh-vegetables-in-basket-on-white-isolated-background-top-view.jpg?s=612x612&w=0&k=20&c=U-9e1GUykrLoDumkoXHbfUV-3cBss_9CTUdQy38CTgk='),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     SizedBox(
                       width: 20,
                     ),
-                    Container(
-                      height: 130,
-                      width: 130,
-                      decoration: BoxDecoration(color: Colors.lightGreen),
-                      child: Image(
-                        image: NetworkImage(
-                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkS7V8r_qmXYJFzHNFeKQKs5X2ugGHsl7d2w&s'),
-                        fit: BoxFit.cover,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Product2()));
+                      },
+                      child: Container(
+                        height: 130,
+                        width: 130,
+                        decoration: BoxDecoration(color: Colors.lightGreen),
+                        child: Image(
+                          image: NetworkImage(
+                              'https://i.pinimg.com/736x/2b/d9/f3/2bd9f3d20a6de968bff7d46c46f71e23.jpg'),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ],

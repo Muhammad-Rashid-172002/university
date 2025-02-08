@@ -4,6 +4,7 @@ import 'package:flutter_app/product/catagories.dart';
 import 'package:flutter_app/product/pro1.dart';
 import 'package:dotted_dashed_line/dotted_dashed_line.dart';
 import 'package:flutter_app/product2/product2.dart';
+import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 
 class Product1 extends StatefulWidget {
   const Product1({super.key});
@@ -13,6 +14,18 @@ class Product1 extends StatefulWidget {
 }
 
 class _Product1State extends State<Product1> {
+  bool isKeyboardVisible = false;
+
+  @override
+  void initState() {
+    super.initState();
+    KeyboardVisibilityController().onChange.listen((bool visible) {
+      setState(() {
+        isKeyboardVisible = visible;
+      });
+    });
+  }
+
   int currentindex = 0;
   List pages = [homescreen(), favorityscreen(), cartscreen(), userscreen()];
   @override
@@ -961,6 +974,7 @@ class homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: true,
         appBar: AppBar(
           backgroundColor: Colors.green,
           leading: Icon(
@@ -968,7 +982,7 @@ class homescreen extends StatelessWidget {
             color: Colors.white,
           ),
           title: Text(
-            'Peshware,Ring,Road',
+            'Peshwar,Ring,Road',
             style: TextStyle(fontSize: 20, color: Colors.white),
           ),
           actions: [

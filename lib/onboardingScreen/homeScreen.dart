@@ -49,7 +49,58 @@ class _HomescreenState extends State<Homescreen> {
               ],
             ),
             SizedBox(
-              height: 70,
+              height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 8,
+                  width: 8,
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(100)),
+                ),
+                SizedBox(
+                  width: 2,
+                ),
+                Container(
+                  height: 8,
+                  width: 8,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(color: Colors.green)),
+                ),
+                SizedBox(
+                  width: 2,
+                ),
+                Container(
+                  height: 8,
+                  width: 8,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(color: Colors.green)),
+                ),
+                SizedBox(
+                  width: 2,
+                ),
+                Container(
+                  height: 8,
+                  width: 8,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(color: Colors.green)),
+                ),
+                SizedBox(
+                  width: 2,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 50,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
